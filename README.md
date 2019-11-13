@@ -3,7 +3,6 @@ https://repl.it/@MattHeerspink/Django-Template
 
 or
 
-
 ### Install from cloned repo
 Clone the repo, remove the git directory, pip install requirements.txt
 ```
