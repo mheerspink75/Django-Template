@@ -8,7 +8,7 @@ Page: https://django-template--mattheerspink.repl.co/
 
 <h1>Test<h1/>
 
-<iframe height="auto" width="auto" src="https://repl.it/@MattHeerspink/Django-Template"></iframe>
+<iframe src="https://repl.it/@MattHeerspink/Django-Template"></iframe>
 
 
 ---
