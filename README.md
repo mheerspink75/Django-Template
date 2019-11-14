@@ -1,6 +1,6 @@
 ### Fork on Repl.it
-https://repl.it/@MattHeerspink/Django-Template-Sandbox
-
+Repl: https://repl.it/@MattHeerspink/Django-Template
+Page: https://django-template--mattheerspink.repl.co/
 or
 
 ### Install from cloned repo
