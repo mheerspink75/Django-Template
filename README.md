@@ -12,7 +12,7 @@ rm -rf .git
 
 virtualenv custom_name
 
-custom_name/scripts/activate
+source custom_name/scripts/activate
 
 pip install -r requirements.txt
 ```
