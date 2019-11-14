@@ -3,14 +3,6 @@
 Repl: https://repl.it/@MattHeerspink/Django-Template
 
 Page: https://django-template--mattheerspink.repl.co/
-
----
-
-<h1>Test<h1/>
-
-<iframe src="https://repl.it/@MattHeerspink/Django-Template"></iframe>
-
-
 ---
 or
 
