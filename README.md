@@ -13,9 +13,9 @@ git clone https://github.com/mheerspink75/Django-Template.git
 
 rm -rf .git
 
-virtualenv custom_name
+virtualenv custom_env_name
 
-source custom_name/scripts/activate
+source custom_env_name/scripts/activate
 
 pip install -r requirements.txt
 
@@ -27,15 +27,15 @@ or
 
 ### Install from scratch
 ```
-virtualenv django_repl
+virtualenv custom_env_name
 
-django_repl/scripts/activate
+custom_env_name/scripts/activate
 
 pip install django
 
-django-admin.py startproject django_app1
+django-admin.py startproject custom_project_name1
 
-cd djangoapp_1
+cd custom_project_name1
 
 pip freeze > requirements.txt
 
@@ -43,9 +43,9 @@ touch runtime.txt
 
 runtime.txt > python-3.7.4
 
-py manage.py startapp app1
+py manage.py startapp custom_app_name1
 ```
-Add 'custom_name' to installed apps in settings
+Add 'custom_app_name1' to installed apps in settings
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'custom_name'
+    'custom_app_name1'
 ]
 ```
 Add 'DIRS' path to Templates
