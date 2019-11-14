@@ -48,7 +48,7 @@ runtime.txt > python-3.7.4
 
 py manage.py startapp custom_app_name1
 ```
-Add 'custom_app_name1' to installed apps in settings
+Add 'custom_app_name1' to installed apps in settings.py
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -80,27 +80,27 @@ C:.
     |   requirements.txt
     |   runtime.txt
     |
-    +---custom_app_name1            <-
+    +---custom_app_name1            <- App Folder
     |   |   admin.py         
     |   |   apps.py
     |   |   models.py
     |   |   tests.py
-    |   |   urls.py                 <-
-    |   |   views.py                <-
+    |   |   urls.py                 <- App URL and path routing
+    |   |   views.py                <- ( /custom_app_name1/templates/pages ) -> render method
     |   |   __init__.py
     |   |
     |   +---migrations
     |   |       __init__.py
     |   |
-    |   +---static                  <-
+    |   +---static                  <- Static files (CSS, JavaScript, Images) -> STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static')
     |   |   \---css
     |   |           style.css
     |   |
-    |   \---templates               <-
-    |       |   base.html           <-
+    |   \---templates               <- Required Folder Name -> ( /templates ) -> 'DIRS': [os.path.join(BASE_DIR, 'templates')]
+    |       |   base.html           <- Required File -> ( templates/base.html ) at top level
     |       |
-    |       \---custom_app_name1    <-
-    |           \---pages
+    |       \---custom_app_name1    <- Required Folder Name ->  ( Same name as app folder is required )
+    |           \---pages           <- Custom folder and file are names ok inside the required folder
     |               |   about.html
     |               |   home.html
     |               |
@@ -108,14 +108,14 @@ C:.
     |                       navbar.html
     |                       sidebar.html
     |
-    \---custom_project_name1        <-
-            settings.py
-            urls.py                 <-
+    \---custom_project_name1        <- Project folder
+            settings.py             <- Project settings
+            urls.py                 <- Project URL and path routing
             wsgi.py
             __init__.py
 
 ```
-Add templates/ path to 'DIRS'
+Add templates/ path to TEMPLATES 'DIRS' in settings.py
 ```
 TEMPLATES = [
     {
@@ -133,7 +133,7 @@ TEMPLATES = [
     },
 ]
 ```
-Add STATICFILES_DIRS
+Add STATICFILES_DIRS to settings.py
 ```
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
