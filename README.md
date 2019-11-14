@@ -4,6 +4,10 @@ Repl: https://repl.it/@MattHeerspink/Django-Template
 
 Page: https://django-template--mattheerspink.repl.co/
 
+---
+<iframe height="400px" width="100%" src="https://repl.it/@MattHeerspink/Django-Template?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
 or
 
 ### Install from cloned repo
@@ -23,6 +27,7 @@ py manage.py migrate
 
 py manage.py runserver
 ```
+---
 or
 
 ### Install from scratch
