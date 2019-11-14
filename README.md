@@ -77,26 +77,26 @@ C:.
     |   requirements.txt
     |   runtime.txt
     |
-    +---custom_app_name1
-    |   |   admin.py
+    +---custom_app_name1            <-
+    |   |   admin.py         
     |   |   apps.py
     |   |   models.py
     |   |   tests.py
-    |   |   urls.py
-    |   |   views.py
+    |   |   urls.py                 <-
+    |   |   views.py                <-
     |   |   __init__.py
     |   |
     |   +---migrations
     |   |       __init__.py
     |   |
-    |   +---static
+    |   +---static                  <-
     |   |   \---css
     |   |           style.css
     |   |
-    |   \---templates
-    |       |   base.html
+    |   \---templates               <-
+    |       |   base.html           <-
     |       |
-    |       \---custom_app_name1
+    |       \---custom_app_name1    <-
     |           \---pages
     |               |   about.html
     |               |   home.html
@@ -105,9 +105,9 @@ C:.
     |                       navbar.html
     |                       sidebar.html
     |
-    \---custom_project_name1
+    \---custom_project_name1        <-
             settings.py
-            urls.py
+            urls.py                 <-
             wsgi.py
             __init__.py
 
