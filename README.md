@@ -92,8 +92,8 @@ C:.
     |   +---migrations
     |   |       __init__.py
     |   |
-    |   +---static                  <- Static files (CSS, JavaScript, Images) -> STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static')
-    |   |   \---css
+    |   +---static                  <- Required Folder Name -> ( /static ) -> Static files (CSS, JavaScript, Images) -> STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static')
+    |   |   \---css                 <- Custom folder and file are names ok inside the required folder
     |   |           style.css
     |   |
     |   \---templates               <- Required Folder Name -> ( /templates ) -> 'DIRS': [os.path.join(BASE_DIR, 'templates')]
