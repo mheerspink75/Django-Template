@@ -63,36 +63,11 @@ py manage.py migrate
 
 py manage.py runserver
 ```
-Add 'DIRS' path to Templates
-```
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
-```
-Add STATICFILES_DIRS
-```
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+Add templates/ and static/ folders and files structure.
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-```
-Add Templates and Static folder and files structure
+Code custom_project_name1/urls, custom_app_name1/urls, custom_app_name1/views, code templates/ and static/ files.
+
 ```
 C:.
 \---custom_directory_folder_name -master  
@@ -137,10 +112,40 @@ C:.
             __init__.py
 
 ```
-Migrate the database and run the dev server
+Add templates/ path to 'DIRS'
 ```
-py manage.py migrate
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+Add STATICFILES_DIRS
+```
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+```
+
+Run the dev server and migrate the database
+```
 py manage.py runserver
+
+py manage.py migrate
 
 ```
