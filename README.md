@@ -1,5 +1,8 @@
 ### Fork on Repl.it
-https://repl.it/@MattHeerspink/Django-Template-Sandbox
+
+Repl: https://repl.it/@MattHeerspink/Django-Template
+
+Page: https://django-template--mattheerspink.repl.co/
 
 or
 
@@ -10,9 +13,9 @@ git clone https://github.com/mheerspink75/Django-Template.git
 
 rm -rf .git
 
-virtualenv custom_name
+virtualenv custom_env_name
 
-source custom_name/scripts/activate
+source custom_env_name/scripts/activate
 
 pip install -r requirements.txt
 
@@ -24,15 +27,15 @@ or
 
 ### Install from scratch
 ```
-virtualenv django_repl
+virtualenv custom_env_name
 
-django_repl/scripts/activate
+custom_env_name/scripts/activate
 
 pip install django
 
-django-admin.py startproject django_app1
+django-admin.py startproject custom_project_name1
 
-cd djangoapp_1
+cd custom_project_name1
 
 pip freeze > requirements.txt
 
@@ -40,9 +43,9 @@ touch runtime.txt
 
 runtime.txt > python-3.7.4
 
-py manage.py startapp app1
+py manage.py startapp custom_app_name1
 ```
-Add 'custom_name' to installed apps in settings
+Add 'custom_app_name1' to installed apps in settings
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -51,8 +54,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'custom_name'
+    'custom_app_name1'
 ]
+```
+Migrate the database and run the dev server
+```
+py manage.py migrate
+
+py manage.py runserver
 ```
 Add 'DIRS' path to Templates
 ```
@@ -82,6 +91,51 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+```
+Add Templates and Static folder and files structure
+```
+C:.
+\---custom_directory_folder_name -master  
+    |   .gitignore
+    |   manage.py
+    |   README.md
+    |   requirements.txt
+    |   runtime.txt
+    |
+    +---custom_app_name1
+    |   |   admin.py
+    |   |   apps.py
+    |   |   models.py
+    |   |   tests.py
+    |   |   urls.py
+    |   |   views.py
+    |   |   __init__.py
+    |   |
+    |   +---migrations
+    |   |       __init__.py
+    |   |
+    |   +---static
+    |   |   \---css
+    |   |           style.css
+    |   |
+    |   \---templates
+    |       |   base.html
+    |       |
+    |       \---custom_app_name1
+    |           \---pages
+    |               |   about.html
+    |               |   home.html
+    |               |
+    |               \---components
+    |                       navbar.html
+    |                       sidebar.html
+    |
+    \---custom_project_name1
+            settings.py
+            urls.py
+            wsgi.py
+            __init__.py
+
 ```
 Migrate the database and run the dev server
 ```
