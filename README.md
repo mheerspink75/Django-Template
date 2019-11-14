@@ -15,6 +15,10 @@ virtualenv custom_name
 source custom_name/scripts/activate
 
 pip install -r requirements.txt
+
+py manage.py migrate
+
+py manage.py runserver
 ```
 or
 
@@ -38,7 +42,7 @@ runtime.txt > python-3.7.4
 
 py manage.py startapp app1
 ```
-Add 'app1' to installed apps in settings
+Add 'custom_name' to installed apps in settings
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -47,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app1'
+    'custom_name'
 ]
 ```
 Add 'DIRS' path to Templates
