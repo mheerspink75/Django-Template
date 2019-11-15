@@ -32,7 +32,7 @@ or
 ```
 virtualenv custom_env_name
 
-custom_env_name/scripts/activate
+source custom_env_name/scripts/activate
 
 pip install django
 
