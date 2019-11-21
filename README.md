@@ -133,7 +133,7 @@ TEMPLATES = [
     },
 ]
 ```
-Add STATICFILES_DIRS to settings.py
+Add STATIC_ROOT, STATIC_URL, and STATICFILES_DIRS to settings.py
 ```
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
