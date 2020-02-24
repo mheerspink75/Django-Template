@@ -1,13 +1,3 @@
-### Fork on Repl.it
-
-Repl: https://repl.it/@MattHeerspink/Django-Template
-
-Page: https://django-template--mattheerspink.repl.co/
-
----
-
-or
-
 ### Install from cloned repo
 Clone the repo, remove the git directory, pip install requirements.txt
 ```
